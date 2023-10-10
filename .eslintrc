@@ -12,5 +12,5 @@
       }
     ]
   },
-  "plugins": ["prettier" ]
+  "plugins": ["prettier"]
 }

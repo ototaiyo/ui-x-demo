@@ -1,7 +1,12 @@
 import path from "path";
-import { Configuration, DefinePlugin } from "webpack";
+import {Configuration as WebpackConfiguration, DefinePlugin} from 'webpack';
+import {Configuration as WebpackDevServerConfiguration} from 'webpack-dev-server';
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
+
+interface Configuration extends WebpackConfiguration {
+    devServer?: WebpackDevServerConfiguration;
+}
 
 const webpackConfig = (): Configuration => {
     return ({
@@ -33,6 +38,11 @@ const webpackConfig = (): Configuration => {
                     use: ["style-loader", "css-loader"],
                 },
             ],
+        },
+        devServer: {
+            port: 3000,
+            open: true,
+            historyApiFallback: true,
         },
         plugins: [
             new HtmlWebpackPlugin({
