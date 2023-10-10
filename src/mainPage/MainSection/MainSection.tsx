@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './App.scss';
+import './MainSection.scss';
 
-const App: React.FC = () => {
+export const MainSection: React.FC = () => {
     console.log(`KEY: ${process.env.REACT_APP_KEY}\nMODE: ${process.env.NODE_ENV}`);
 
     return (
@@ -14,5 +14,3 @@ const App: React.FC = () => {
         </section>
     );
 };
-
-export default App;
