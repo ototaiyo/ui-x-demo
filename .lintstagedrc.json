@@ -1,17 +1,6 @@
 {
-"src/**/*.{json,html,scss}": [
-"prettier --write -u"
-    ],
-    ".*{rc}": [
-        "prettier --write -u"
-    ],
-    ".*rc.json": [
-        "prettier --write -u"
-    ],
-    "tsconfig.json": [
-        "prettier --write -u"
-    ],
-    "src/**/*.(ts|tsx)": [
-        "eslint --quiet --fix"
-    ]
+    "src/**/*.{json,html,scss}": ["prettier --write -u"],
+    ".*{rc,rc.json}": ["prettier --write -u"],
+    "tsconfig.json": ["prettier --write -u"],
+    "src/**/*.(ts|tsx)": ["eslint --quiet --fix"]
 }
