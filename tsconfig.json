@@ -12,7 +12,9 @@
     "resolveJsonModule": true,
     "downlevelIteration": true,
     "paths": {
-      "*": ["src/*"]
+            "*": [
+                "src/*"
+            ]
     },
     "lib": [
       "esnext",
