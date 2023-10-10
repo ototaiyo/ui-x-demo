@@ -1,5 +1,6 @@
 import React, {StrictMode, useEffect} from 'react';
 import {createRoot} from 'react-dom/client';
+
 import App from './App';
 
 function AppWithCallbackAfterRender() {
@@ -10,9 +11,11 @@ function AppWithCallbackAfterRender() {
     return <App />;
 }
 
-const container = document.getElementById('root');
+const rootElement = document.getElementById('root');
 
-const root = createRoot(container!);
+if (!rootElement) throw new Error('Failed to find the root element');
+
+const root = createRoot(rootElement);
 
 root.render(
     <StrictMode>
