@@ -1,0 +1,8 @@
+{
+  "name": "ui-x-demo",
+  "version": "1.0.0",
+  "description": "Some description",
+  "main": "index.js",
+  "author": "Gleb Panteleev <otohoshi@gmail.com>",
+  "license": "MIT"
+}
