@@ -1,31 +1,40 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "target": "ESNext",
-    "removeComments": true,
-    "allowSyntheticDefaultImports": true,
-    "jsx": "react",
-    "allowJs": true,
-    "baseUrl": "src",
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "downlevelIteration": true,
-    "paths": {
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "removeComments": true,
+        "allowSyntheticDefaultImports": true,
+        "noUnusedLocals": true,
+        "noImplicitReturns": true,
+        "jsx": "react",
+        "module": "commonjs",
+        "target": "ESNext",
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "allowJs": true,
+        "forceConsistentCasingInFileNames": true,
+        "strictNullChecks": true,
+        "declaration": true,
+        "baseUrl": "src",
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "downlevelIteration": true,
+        "paths": {
             "*": [
                 "src/*"
             ]
+        },
+        "lib": [
+            "esnext",
+            "dom",
+            "dom.iterable"
+        ]
     },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable"
+    "exclude": [
+        "node_modules",
+        "build"
     ],
-    "sourceMap": true,
-    "noImplicitAny": false,
-  },
-  "exclude": ["node_modules", "build"],
-  "include": [
-    "./src",
-    "webpack.config.ts" ]
+    "include": [
+        "./src",
+        "webpack.config.ts"
+    ]
 }

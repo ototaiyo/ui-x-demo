@@ -1,8 +1,18 @@
 {
   "parser": "@babel/eslint-parser",
+    "env": {
+        "es6": true
+    },
   "parserOptions": {
     "sourceType": "module",
-    "ecmaVersion": 2015
+    "ecmaVersion": 2015,
+        "simple-import-sort/sort": "error",
+        "sort-imports": "off",
+        "import/order": "off",
+        "prettier/prettier": "error",
+        "import/first": "error",
+        "import/newline-after-import": "error",
+        "import/no-duplicates": "error"
   },
   "rules": {
     "prettier/prettier": [
@@ -12,5 +22,35 @@
       }
     ]
   },
-  "plugins": ["prettier"]
+    "plugins": [
+        "simple-import-sort",
+        "prettier",
+        "import"
+    ],
+    "overrides": [
+        {
+            "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
+            "rules": {
+                "simple-import-sort/imports": [
+                    "error",
+                    {
+                        "groups": [
+                            // Packages `react` related packages come first.
+                            ["^react", "^@?\\w"],
+                            // Internal packages.
+                            ["^(@|components)(/.*|$)"],
+                            // Side effect imports.
+                            ["^\\u0000"],
+                            // Parent imports. Put `..` last.
+                            ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+                            // Other relative imports. Put same-folder imports and `.` last.
+                            ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+                            // Style imports.
+                            ["^.+\\.?(css)$"]
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
 }
