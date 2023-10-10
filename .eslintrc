@@ -1,11 +1,11 @@
 {
-  "parser": "@babel/eslint-parser",
+    "parser": "@babel/eslint-parser",
     "env": {
         "es6": true
     },
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaVersion": 2015,
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2015,
         "simple-import-sort/sort": "error",
         "sort-imports": "off",
         "import/order": "off",
@@ -13,20 +13,16 @@
         "import/first": "error",
         "import/newline-after-import": "error",
         "import/no-duplicates": "error"
-  },
-  "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "endOfLine": "auto"
-      }
-    ]
-  },
-    "plugins": [
-        "simple-import-sort",
-        "prettier",
-        "import"
-    ],
+    },
+    "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ]
+    },
+    "plugins": ["simple-import-sort", "prettier", "import"],
     "overrides": [
         {
             "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],

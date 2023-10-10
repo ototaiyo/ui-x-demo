@@ -40,7 +40,7 @@ const webpackConfig = (env: any, argv: any): Configuration => {
         },
         output: {
             path: path.join(__dirname, '/build'),
-            filename: 'build.[hash:8].js',
+            filename: 'build.[fullhash].js',
         },
         module: {
             rules: [
@@ -71,7 +71,7 @@ const webpackConfig = (env: any, argv: any): Configuration => {
         },
         plugins: isDevMode
             ? devPlugins
-            : [...devPlugins, new MiniCssExtractPlugin({filename: 'styles.[hash:8].css'})],
+            : [...devPlugins, new MiniCssExtractPlugin({filename: 'styles.[fullhash].css'})],
     };
 };
 
