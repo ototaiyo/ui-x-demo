@@ -54,7 +54,7 @@
         "startProd": "webpack serve --mode production --open --progress",
         "build": "rimraf build && webpack --mode production --progress",
         "lint": "eslint --quiet --fix webpack.config.ts src/**/*.{ts,tsx}",
-        "format": "prettier --write src/**/*.{js,jsx,ts,tsx,json,scss} public/*.html",
+        "format": "prettier --write src/**/*.{js,jsx,ts,tsx,json,scss} public/*.html tsconfig.json",
         "prepare": "husky install"
     },
     "husky": {
