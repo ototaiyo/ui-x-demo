@@ -1,14 +1,17 @@
 import React from 'react';
 
-import './styles.scss';
+import './App.scss';
 
 const App: React.FC = () => {
     console.log(`KEY: ${process.env.REACT_APP_KEY}\nMODE: ${process.env.NODE_ENV}`);
 
     return (
-        <div className="wrapper">
-            <h1>React 18 and TypeScript 5 App!🚀</h1>
-        </div>
+        <section>
+            <div className="header">React 18 and TypeScript 5 App!🚀</div>
+            <p className="body-text">
+                Main page. You are running this application in <b>{process.env.NODE_ENV}</b> mode.
+            </p>
+        </section>
     );
 };
 

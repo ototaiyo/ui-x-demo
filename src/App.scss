@@ -1,0 +1,30 @@
+@import 'styles';
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    & > *:last-child {
+        flex: 1 1 100%;
+    }
+
+    & > *:nth-child(n + 2) {
+        margin-top: 0;
+    }
+
+    .header {
+        display: flex;
+        font-size: 24px;
+        font-weight: bolder;
+        margin-top: auto;
+        justify-content: center;
+        background-color: $mainColor;
+        border-bottom: 5px solid $underLineMainColor;
+    }
+
+    .body-text {
+        padding: 10px;
+        margin-bottom: 0;
+    }
+}

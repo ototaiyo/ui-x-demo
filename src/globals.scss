@@ -1,0 +1,39 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    background-color: antiquewhite;
+
+    body {
+        &,
+        & > * {
+            display: flex;
+        }
+
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+
+        #root {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+
+            & > *:first-child {
+                flex: 1 1 100%;
+            }
+
+            & > *:nth-child(n + 2) {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cadetblue;
+}
